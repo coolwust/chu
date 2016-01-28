@@ -1,0 +1,87 @@
+html {
+    color: #333;
+}
+.content {
+    max-width: 1120px;
+    margin: 0px auto 0px auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+body > header {
+    padding: 20px 0 5px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+body > header > h1 {
+    flex: 1 0 auto;
+    margin: 0;
+    font: 200 24px sans-serif;
+    white-space: nowrap;
+}
+
+body > header > h1 > span {
+    color: #e50012;
+    font: 400 34px sans-serif;
+    vertical-align: -3px;
+}
+
+body > nav {
+    display: table;
+    flex: 0 1 auto;
+    ruby-position: under;
+    margin-left: 4px;
+}
+
+body > nav ul {
+    display: table-row;
+    float: right
+}
+
+body > nav ul li {
+    display: table-cell;
+    white-space: nowrap;
+    border-left: 1px dashed #333;
+}
+
+body > nav ul li a {
+    color: #333;
+    display: block;
+    padding: 4px 25px 4px 20px;
+    margin: 2px 4px 2px 4px;
+}
+
+body > nav ul li a:hover {
+    background-color: #e50012;
+    color: #fff;
+    text-decoration: none;
+}
+
+body > nav ul li a:hover rt {
+    color: #fff;
+}
+
+.nav-focus {
+    background-color: #e50012 !important;
+    color: #fff !important;
+    text-decoration: none;
+}
+
+body > nav .nav-focus rt {
+    color: #fff !important;
+}
+
+body > nav span {
+    display: table-cell;
+    position: relative;
+    top: 5px;
+    padding-right: 10px;
+}
+
+body > nav ruby {
+    display: table-cell;
+}
+
+body > nav rt {
+    color: #e50012;
+}
