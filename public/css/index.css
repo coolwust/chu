@@ -1,0 +1,35 @@
+#slide > header {
+    padding: 0 calc((100% - 1120px) / 2) 0 calc((100% - 1120px) / 2);
+    background-color: #FAF9F9;
+}
+
+#slide > header > ul > li {
+    display: table-cell;
+    padding: 12px 10px 12px 10px;
+}
+
+#slide > article, #slide > header, #slide > header > ul {
+    margin: 0;
+}
+
+#slide > article {
+    height: 600px;
+    background: url("/public/image/slide2.jpg") bottom/cover no-repeat;
+    display: block;
+}
+
+#slide > article > img {
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 670px) {
+
+    #slide > header > ul:first-child {
+        margin-left: 10px;
+    }
+
+    #slide > header > ul > li {
+        padding: 10px 10px 10px 10px;
+    }
+}

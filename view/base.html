@@ -7,13 +7,34 @@
       <link rel="stylesheet" type="text/css" href="/public/css/reset.css">
       <link rel="stylesheet" type="text/css" href="/public/css/base.css">
       <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          var icon = document.getElementById('menu-icon');
+          var menu = document.querySelector('#nav ul');
+          var show = false;
+          icon.addEventListener('click', function () {
+            if (show === false) {
+              menu.style.display = 'table';
+              icon.style.border = '1px solid #333';
+              icon.style.borderBottom = 'none';
+              icon.style.color = '#e50012';
+              show = true;
+            } else {
+              menu.style.display = 'none';
+              icon.style.border = 'none';
+              icon.style.color = '#333';
+              show = false;
+            }
+          });
+        });
+      </script>
       {{template "head" .}}
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
       <header id="header">
-        <h1 id="title">
-          <span id="logo">✝</span>基督教華府中國教會
-        </h1>
+        <h1 id="title"><span id="logo">✝</span>基督教華府中國教會</h1>
+        <a href="#" id="menu-icon"><span class="glyphicon glyphicon-th-list"></span></a>
         <nav id="nav">
           <ul>
             <li><a class="nav-focus" href="#"><span class="glyphicon glyphicon-home"></span><ruby><rb>首頁</rb><rt>HOME</rt></ruby></a></li>

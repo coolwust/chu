@@ -3,6 +3,7 @@ html {
 }
 
 #header {
+    min-width: 300px;
     padding: 20px calc((100% - 1120px) / 2) 5px calc((100% - 1120px) / 2);
     border-bottom: 1px solid #e8e8e8;
     display: flex;
@@ -11,7 +12,7 @@ html {
 
 #title {
     flex: 1 0 auto;
-    margin: 0;
+    margin: 0 0 6px 0;
     font: 200 24px sans-serif;
     white-space: nowrap;
 }
@@ -24,7 +25,6 @@ html {
 
 #nav {
     flex: 0 1 content;
-    float: right;
     ruby-position: under;
     margin-left: 6px;
 }
@@ -67,9 +67,43 @@ html {
     color: #e50012;
 }
 
+#menu-icon {
+    display: none;
+}
+
 @media (max-width: 670px) {
-    html {
-        background-color: black;
+
+    #title {
+        margin-left: 10px;
+    }
+
+    #nav ul {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 150px;
+        border: 1px solid #333;
+        display: none;
+        background-color: white;
+        z-index: 998;
+    }
+
+    #nav ul li {
+        display: table-row;
+        border: 1px dashed #333;
+    }
+
+    #menu-icon {
+        position: absolute;
+        top: 22px;
+        right: 6px;
+        display: block;
+        font-size: 24px;
+        color: #333;
+        padding: 4px 8px 0 8px;
+        margin-right: 14px;
+        z-index: 999;
+        background-color: white;
     }
 }
 
