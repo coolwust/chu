@@ -10,25 +10,25 @@
       {{template "head" .}}
     </head>
     <body>
-      <header>
-        <div class="content">
-          <h1><span>✝</span>基督教華府中國教會</h1>
-          <nav id="nav">
-            <ul>
-              <li><a class="nav-focus" href="#"><span class="glyphicon glyphicon-home"></span><ruby><rb>首頁</rb><rt>HOME</rt></ruby></a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-calendar"></span><ruby><rb>活動</rb><rt>EVENTS</rt></ruby></a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-user"></span><ruby><rb>事工</rb><rt>MINISTRY</rt></ruby></a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-education"></span><ruby><rb>學校</rb><rt>SCHOOL</rt></ruby></a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-leaf"></span><ruby><rb>關於</rb><rt>ABOUT</rt></ruby></a></li>
-              <li><a href="#"><span class="glyphicon glyphicon-cd"></span><ruby><rb>資源</rb><rt>RESOURCES</rt></ruby></a></li>
-            </ul>
-          </nav>
-        </div>
+      <header id="header">
+        <h1 id="title">
+          <span id="logo">✝</span>基督教華府中國教會
+        </h1>
+        <nav id="nav">
+          <ul>
+            <li><a class="nav-focus" href="#"><span class="glyphicon glyphicon-home"></span><ruby><rb>首頁</rb><rt>HOME</rt></ruby></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-calendar"></span><ruby><rb>活動</rb><rt>EVENTS</rt></ruby></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span><ruby><rb>事工</rb><rt>MINISTRY</rt></ruby></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-education"></span><ruby><rb>學校</rb><rt>SCHOOL</rt></ruby></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-leaf"></span><ruby><rb>關於</rb><rt>ABOUT</rt></ruby></a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-cd"></span><ruby><rb>資源</rb><rt>RESOURCES</rt></ruby></a></li>
+          </ul>
+        </nav>
       </header>
-      <main>
+      <main id="main">
         {{template "main" .}}
       </main>
-      <footer>
+      <footer id="footer">
         <address>contact me!</address>
       </footer>
     </body>
