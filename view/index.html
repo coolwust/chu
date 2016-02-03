@@ -1,45 +1,18 @@
 {{define "head"}}
   <link rel="stylesheet" type="text/css" href="/public/css/index.css">
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      var counter = 0;
-      var lis     = document.querySelectorAll('.slide > header > ul > li');
-      var figures = document.querySelectorAll('.slide > figure');
-      function change(i) {
-        if (counter === i) return;
-        var triangle = lis[counter].querySelector('.slide-triangle');
-        lis[counter].removeChild(triangle);
-        lis[counter].classList.remove('slide-li-active');
-        figures[counter].classList.remove('slide-figure-active');
-        lis[i].classList.add('slide-li-active');
-        figures[i].classList.add('slide-figure-active');
-        lis[i].appendChild(triangle);
-        counter = i;
-      }
-      [].forEach.call(lis, function(li, i) {
-        li.addEventListener('click', function () {
-          interval = clearInterval(interval);
-          change(i);
-        });
-      });
-      var interval = window.setInterval(function () {
-        var i = counter === 2 ? 0 : counter + 1;
-        change(i);
-      }, 15000);
-    });
-  </script>
+  <script src="/public/js/index.js"></script>
 {{end}}
 
 {{define "main"}}
   <article class="slide">
     <header>
       <ul>
-        <li class="slide-li-active">歡迎您<span class="slide-triangle"></span></li>
+        <li class="slide-active-title">歡迎您<span class="slide-triangle"></span></li>
         <li>聖經金句</li>
         <li>今年主题</li>
       </ul>
     </header>
-    <figure class="slide-figure-active">
+    <figure class="slide-active-image">
       <figcaption>
         <h2>歡迎你!</h2>
         <p>我們歡迎你参訪我們的網站。如果你正在尋找教會而且今天是你第一次接觸到華府中國教會，我們熱烈地歡迎你，並希望你會藉著這網站更多認識我們。我們是一群藉著 與耶穌基督建立切身關係而專心去認識神的信徒。我們按聖靈的指引過生活，彼此相交，目的是要更像耶穌。我們最大的盼望就是，其他的人也能在他們一生當中認識耶穌基督，並能活出祂的樣式。我們盼望很快地就能與你見面。</p>
