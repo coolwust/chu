@@ -5,49 +5,29 @@
       <title>基督教華府中國教會</title>
       <meta charset="UTF-8">
       <link rel="stylesheet" type="text/css" href="/public/css/reset.css">
+      <link rel="stylesheet" type="text/css" href="/public/css/font-awesome.css">
       <link rel="stylesheet" type="text/css" href="/public/css/base.css">
-      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          var icon = document.getElementById('menu-icon');
-          var menu = document.querySelector('#nav ul');
-          var show = false;
-          icon.addEventListener('click', function () {
-            if (show === false) {
-              menu.style.display = 'table';
-              icon.style.border = '1px solid #333';
-              icon.style.borderBottom = 'none';
-              icon.style.color = '#e50012';
-              show = true;
-            } else {
-              menu.style.display = 'none';
-              icon.style.border = 'none';
-              icon.style.color = '#333';
-              show = false;
-            }
-          });
-        });
-      </script>
-      {{template "head" .}}
+      <script src="/public/js/base.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      {{template "head" .}}
     </head>
     <body>
-      <header id="header">
-        <h1 id="title"><span id="logo">✝</span>基督教華府中國教會</h1>
-        <a href="#" id="menu-icon"><span class="glyphicon glyphicon-th-list"></span></a>
-        <nav id="nav">
+      <header class="header">
+        <h1 class="title"><span class="logo">✝</span>基督教華府中國教會</h1>
+        <nav class="nav">
+          <i class="fa fa-bars nav-menu"></i>
           <ul>
-            <li><a class="nav-focus" href="#"><span class="glyphicon glyphicon-home"></span><ruby><rb>首頁</rb><rt>HOME</rt></ruby></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-calendar"></span><ruby><rb>活動</rb><rt>EVENTS</rt></ruby></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span><ruby><rb>事工</rb><rt>MINISTRY</rt></ruby></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-education"></span><ruby><rb>學校</rb><rt>SCHOOL</rt></ruby></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-leaf"></span><ruby><rb>關於</rb><rt>ABOUT</rt></ruby></a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-cd"></span><ruby><rb>資源</rb><rt>RESOURCES</rt></ruby></a></li>
+            <li><a class="nav-active" href="#"><i class="fa fa-home fa-lg"></i><ruby><rb>首頁</rb><rt>HOME</rt></ruby></a></li>
+            <li><a href="#"><i class="fa fa-camera-retro fa-lg"></i><ruby><rb>活動</rb><rt>EVENTS</rt></ruby></a></li>
+            <li><a href="#"><i class="fa fa-user fa-lg"></i><ruby><rb>事工</rb><rt>MINISTRY</rt></ruby></a></li>
+            <li><a href="#"><i class="fa fa-graduation-cap fa-lg"></i><ruby><rb>學校</rb><rt>SCHOOL</rt></ruby></a></li>
+            <li><a href="#"><i class="fa fa-cubes fa-lg"></i><ruby><rb>關於</rb><rt>ABOUT</rt></ruby></a></li>
+            <li><a href="#"><i class="fa fa-file-text-o fa-lg"></i><ruby><rb>資源</rb><rt>RESOURCES</rt></ruby></a></li>
           </ul>
         </nav>
       </header>
         {{template "main" .}}
-      <footer id="footer">
+      <footer class="footer">
         <address>contact me!</address>
       </footer>
     </body>

@@ -1,109 +1,120 @@
-html, body {
-    color: #333;
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Raleway.woff') format('woff');
 }
-
-#header {
-    min-width: 300px;
-    padding: 20px calc((100% - 1120px) / 2) 5px calc((100% - 1120px) / 2);
-    border-bottom: 1px solid #e8e8e8;
-    display: flex;
-    flex-wrap: wrap;
+@font-face {
+  font-family: 'Volter';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Volter.ttf') format('truetype');
 }
-
-#title {
-    flex: 1 0 auto;
-    margin: 0 0 6px 0;
-    font: 200 24px sans-serif;
-    white-space: nowrap;
+html {
+  color: #333;
+  font: 14px 'Raleway', 14px sans-serif;
 }
-
-#logo {
-    color: #e50012;
-    font: 400 34px sans-serif;
-    vertical-align: -3px;
+a {
+  color: #333;
+  text-decoration: none;
 }
-
-#nav {
-    flex: 0 1 content;
-    ruby-position: under;
-    margin-left: 6px;
+.header {
+  padding: 15px calc((100% - 1120px) / 2) 15px calc((100% - 1120px) / 2);
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
 }
-
-#nav ul li {
-    display: table-cell;
-    white-space: nowrap;
-    border-left: 1px dashed #333;
+.title {
+  flex: 1 0 auto;
+  margin-left: 10px;
+  font-size: 24px;
+  white-space: nowrap;
 }
-
-#nav ul li a {
-    color: #333;
-    display: block;
-    padding: 4px 25px 4px 20px;
-    margin: 2px 4px 2px 4px;
+.logo {
+  color: #e50012;
+  font-size: 34px;
+  vertical-align: -2px;
 }
-
-#nav ul li a:hover, .nav-focus {
-    background-color: #e50012 !important;
-    color: #fff !important;
-    text-decoration: none !important;
+.nav {
+  flex: 0 1 auto;
+  margin-left: 10px;
 }
-
-#nav ul li a:hover rt, .nav-focus rt {
-    color: #fff !important;
+.nav li {
+  display: table-cell;
+  border-left: 1px dashed #333;
+  white-space: nowrap;
 }
-
-#nav span {
-    display: table-cell;
-    position: relative;
-    top: 5px;
-    padding-right: 10px;
+.nav a {
+  display: block;
+  padding: 4px 25px 4px 20px;
+  margin: 2px 4px 2px 4px;
 }
-
-#nav ruby {
-    display: table-cell;
+.nav a i {
+  display: table-cell;
+  position: relative;
+  top: 7px;
+  padding-right: 10px;
 }
-
-#nav rt {
-    color: #e50012;
+.nav ruby {
+  display: table-cell;
 }
-
-#menu-icon {
-    display: none;
+.nav rt {
+  display: block;
+  font: bold 9px 'Volter';
+  color: #e50012;
+  text-align: center;
+}
+.nav a:hover, .nav-active {
+  background-color: #e50012;
+  color: #fff;
+}
+.nav a:hover rt, .nav-active rt {
+  color: #fff;
+}
+.nav-menu {
+  display: none;
+  font-size: 24px;
 }
 
 @media (max-width: 670px) {
-
-    #title {
-        margin-left: 10px;
-    }
-
-    #nav ul {
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 150px;
-        border: 1px solid #333;
-        display: none;
-        background-color: white;
-        z-index: 998;
-    }
-
-    #nav ul li {
-        display: table-row;
-        border: 1px dashed #333;
-    }
-
-    #menu-icon {
-        position: absolute;
-        top: 22px;
-        right: 6px;
-        display: block;
-        font-size: 24px;
-        color: #333;
-        padding: 4px 8px 0 8px;
-        margin-right: 14px;
-        z-index: 999;
-        background-color: white;
-    }
+  .nav {
+    margin-right: 20px;
+    position: relative;
+  }
+  .nav ul {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      width: 150px;
+      border: 1px solid #333;
+      display: none;
+      background-color: white;
+      z-index: 998;
+  }
+  .nav:hover ul {
+    display: block;
+  }
+  .nav li {
+      display: table-row;
+      border: 1px dashed #333;
+  }
+  .nav a i {
+      width: 30px;
+  }
+  .nav-menu {
+      display: block;
+      /*
+      position: absolute;
+      top: 22px;
+      right: 6px;
+      font-size: 24px;
+      color: #333;
+      padding: 4px 8px 0 8px;
+      margin-right: 14px;
+      z-index: 999;
+      background-color: white;
+      */
+  }
 }
 
