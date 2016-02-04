@@ -4,37 +4,57 @@
 {{end}}
 
 {{define "main"}}
-  <article class="slide">
+  <div class="slide">
     <header>
       <ul>
-        <li class="slide-active-title">歡迎您<span class="slide-triangle"></span></li>
+        <li class="slide-active-button">歡迎您<span class="slide-triangle"></span></li>
         <li>聖經金句</li>
         <li>今年主题</li>
       </ul>
+      <div>
+        <i class="fa fa-play-circle-o slide-active-button"></i>
+        <i class="fa fa-pause-circle-o"></i>
+      </div>
     </header>
-    <figure class="slide-active-image">
-      <figcaption>
-        <h2>歡迎你!</h2>
-        <p>我們歡迎你参訪我們的網站。如果你正在尋找教會而且今天是你第一次接觸到華府中國教會，我們熱烈地歡迎你，並希望你會藉著這網站更多認識我們。我們是一群藉著 與耶穌基督建立切身關係而專心去認識神的信徒。我們按聖靈的指引過生活，彼此相交，目的是要更像耶穌。我們最大的盼望就是，其他的人也能在他們一生當中認識耶穌基督，並能活出祂的樣式。我們盼望很快地就能與你見面。</p>
-      </figcaption>
-    </figure>
-    <figure>
-      <figcaption>
-        <p>耶穌坐下，叫十二個門徒來說，若有人願意作首先的，他必作眾人末後的，作眾人的用人。</p>
-        <p>—— 馬可福音 9:35</p>
-      </figcaption>
-    </figure>
-    <figure>
-      <figcaption><div>
-        <h2>作貴重器皿,合乎主用.</h2>
-        <p>在大戶人家，不僅有金器、銀器，也有木器、瓦器；有作為貴重的，有作為卑賤的。人若自潔, 脫離卑賤的事，就必作貴重的器皿，成為聖潔，合乎主用，預備行各樣的善事 。</p>
-        <p>—— 提摩太後書 2:20-21</p>
-      </div></figcaption>
-    </figure>
-  </article>
-  <article class="event">
+    <div>
+      <figure class="slide-welcome slide-active-image">
+        <figcaption>
+          <h2>歡迎您!</h2>
+          <p>
+            我們歡迎你参訪我們的網站。如果你正在尋找教會而且今天是你第一次接觸到
+            華府中國教會，我們熱烈地歡迎你，並希望你會藉著這網站更多認識我們。我
+            們是一群藉著與耶穌基督建立切身關係而專心去認識神的信徒。我們按聖靈的
+            指引過生活，彼此相交，目的是要更像耶穌。我們最大的盼望就是，其他的人
+            也能在他們一生當中認識耶穌基督，並能活出祂的樣式。我們盼望很快地就能
+            與你見面。
+          </p>
+        </figcaption>
+      </figure>
+      <figure class="slide-bible">
+        <figcaption>
+          <p>
+            耶穌坐下，叫十二個門徒來說，若有人願意作首先的，他必作眾人末後的，作
+            眾人的用人。
+          </p>
+          <p class="slide-reference">—— 馬可福音 9:35</p>
+        </figcaption>
+      </figure>
+      <figure class="slide-theme">
+        <figcaption>
+          <h2>作貴重器皿,合乎主用</h2>
+          <p>
+            在大戶人家，不僅有金器、銀器，也有木器、瓦器；有作為貴重的，有作為卑
+            賤的。人若自潔, 脫離卑賤的事，就必作貴重的器皿，成為聖潔，合乎主用，
+            預備行各樣的善事 。
+          </p>
+          <p class="slide-reference">—— 提摩太後書 2:20-21</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+  <div class="event">
     <h4><span class="glyphicon glyphicon-tags" aria-hidden="true"></span>近期活動：</h4>
     <h3>慶祝春節晚會，歡迎參加</h3>
     <div class="count-down"></div>
-  </article>
+  </div>
 {{end}}

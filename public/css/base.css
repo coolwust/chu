@@ -39,6 +39,9 @@ a {
   border-left: 1px dashed #333;
   white-space: nowrap;
 }
+.nav li:last-child {
+  border-right: 1px dashed #333;
+}
 .nav a {
   display: block;
   padding: 4px 25px 4px 20px;
