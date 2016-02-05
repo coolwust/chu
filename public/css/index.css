@@ -1,6 +1,3 @@
-.slide {
-  /*height: calc(60vh + 37px);*/
-}
 .slide header {
   padding: 0 calc((100% - 1120px) / 2) 0 calc((100% - 1120px) / 2);
   background-color: #FAF9F9;
@@ -24,6 +21,7 @@
 }
 .slide header div {
   margin-left: auto;
+  margin-right: 10px;
 }
 .slide header i {
   padding-left: 4px;
@@ -37,10 +35,10 @@
 }
 .slide > div {
   position: relative;
-  height: 60vh;
+  height: 50vh;
 }
 .slide figure {
-  height: 60vh;
+  height: 50vh;
   position: absolute;
   top: 0;
   left: 0;
@@ -52,14 +50,14 @@
 .slide figcaption {
   background-color: rgba(0,0,0,0.3);
   color: white;
-  padding: 12px 22px;
+  padding: 14px 24px;
 }
 .slide h2 {
   font-size: 30px;
-  line-height: 1.4em;
+  line-height: 1.6em;
 }
 .slide p {
-  line-height: 1.2em;
+  line-height: 1.4em;
 }
 .slide-welcome {
   background: url('/public/images/slide-1.jpg') center/cover no-repeat;
@@ -68,7 +66,7 @@
 }
 .slide-welcome figcaption {
   color: white;
-  margin: 0 20vw 5vh 0;
+  margin: 0 17vw 5vh 0;
 }
 .slide-bible {
   background: url('/public/images/slide-2.jpg') bottom/cover no-repeat;
@@ -93,7 +91,7 @@
   text-align: right;
 }
 .slide-active-button {
-  color: #cd0816;
+  color: #C71B1B;
 }
 .slide-active-image {
   opacity: 1 !important;
@@ -111,46 +109,166 @@
   z-index: 1;
 }
 .event {
-    display: flex;
-    flex-flow: column wrap;
-    height: 120px;
-    background: url('/public/images/event.jpg');
-    padding: 20px calc((100% - 1120px) / 2) 0 calc((100% - 1120px) / 2);
-    font-size: 18px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  height: 100px;
+  background: url('/public/images/event.jpg');
+  padding: 0 calc((100% - 1120px) / 2) 0 calc((100% - 1120px) / 2);
+}
+.event-description {
+  display: inline-block;
+  line-height: 1.8em;
+  flex: 1 0 auto;
+  margin-left: 10px;
+}
+.event-description h4 {
+  /*color: #3E4043;*/
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+.event-description h3 {
+  font-size: 20px;
+  color: #C71B1B;
+  margin-left: 10px;
+}
+.countdown {
+  display: block;
+  width: 380px;
+}
+.countdown-box {
+  display: flex;
+  flex-flow: column wrap;
+  height: 70px;
+}
+.countdown-entity {
+  width: 75px;
+  height: 70px;
+  margin-left: 15px;
+  margin-bottom: 4px;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  position: relative;
+}
+.countdown-value {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #4f5159;
+  height: 45px;
+  border-bottom: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.countdown-unit {
+  color: #898989;
+  font-size: 14px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.countdown-unit::before, .countdown-unit::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  border-radius: 3px;
+  border-width: 0px 1px 1px;
+  border-style: none solid solid;
+  border-color: #eee;
+}
+.countdown-unit::before {
+  bottom: -4px;
+  left: 2px;
+  right: 2px;
+}
+.countdown-unit::after {
+  bottom: -7px;
+  left: 4px;
+  right: 4px;
+}
+.event-detail {
+  color: white;
+  margin: 0 15px 0 40px;
+  padding: 12px 18px;
+  background: transparent linear-gradient(to bottom, #E65927 0%, #C71B1B 40%, #DD3D15 100%) repeat scroll 0% 0%;
+  border-radius: 4px;
+  border: 1px solid #BF4927;
+  box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4) inset, 1px 1px 2px rgba(154, 125, 108, 0.59);
+}
+.event-detail:hover {
+  background: transparent linear-gradient(to bottom, #E65927 0%, #ca0010 40%, #DD3D15 100%) repeat scroll 0% 0%;
+}
+.event-all {
+  color: #C71B1B;
+  margin: 0 10px 0 15px;
+  white-space: nowrap;
+}
+.event-all:hover {
+  text-decoration: underline;
+}
+.our-faith {
+  padding: 0 calc((100% - 1120px) / 2);
+  display: flex;
+  flex-flow: row wrap;
+}
+.our-faith > h2 {
+  font-size: 28px;
+  width: 100%;
+  margin: 50px 0 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.our-faith > p {
+  color: #696362;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.our-faith-entity {
+  width: 25%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+.our-faith-entity img {
+  height: 80px;
+}
+.our-faith-entity i {
+  padding: 20px 10px 0 0;
+  font-size: 60px;
+  color: #C71B1B;
+}
+.our-faith-entity h3 {
+  font-size: 24px;
+  margin: 20px 0 20px 0;
+  color: #393332;
+}
+.our-faith-entity p {
+  margin: 10px 30px;
+  text-align: center;
+  color: #696362;
 }
 
-.event h4 {
-    flex: 0 1 content;
-    color: #3E4043;
-    font-size: 14px;
-    font-weight: bold;
-    margin: 0;
-}
-
-.event h3 {
-    flex: 0 1 content;
-    font: 400 20px/26px 'Raleway' !important;
-    color: #D14D42;
-    font-size: 24px;
-    margin: 0;
-}
-
-.count-down {
-    height: 100px;
-    width: 300px;
-    background-color: black;
-}
-
-@media (max-width: 670px) {
-
-    .slide > figure > figcaption, .slide > figure > figcaption > div {
-        display: flex !important;
-        width: 100% !important;
-        margin: 0 0 0 0 !important;
-    }
-
-  .slide header div {
-    margin-right: 28px;
+@media (max-width: 1035px) {
+  .countdown {
+    display: none;
   }
-
+}
+@media (max-width: 670px) {
+  .countdown, .event-detail, .event-or, .event-all {
+    display: none;
+  }
+  .event-description {
+    flex: 0 1 auto;
+  }
+  .event {
+    justify-content: center;
+  }
+  .our-faith-entity {
+    width: 50%;
+  }
 }

@@ -1,3 +1,4 @@
+/* E50012 */
 @font-face {
   font-family: 'Volter';
   font-style: normal;
@@ -26,13 +27,13 @@ a {
   white-space: nowrap;
 }
 .logo {
-  color: #e50012;
+  color: #C71B1B;
   font-size: 34px;
   vertical-align: -2px;
 }
 .nav {
   flex: 0 1 auto;
-  margin-left: 10px;
+  margin: 0 10px;
 }
 .nav li {
   display: table-cell;
@@ -59,11 +60,11 @@ a {
 .nav rt {
   display: block;
   font: bold 9px 'Volter';
-  color: #e50012;
+  color: #C71B1B;
   text-align: center;
 }
 .nav a:hover, .nav-active {
-  background-color: #e50012;
+  background-color: #C71B1B;
   color: #fff;
 }
 .nav a:hover rt, .nav-active rt {
@@ -79,6 +80,9 @@ a {
 }
 
 @media (max-width: 680px) {
+  .header {
+    position: fixed;
+  }
   .nav-menu {
     display: block;
   }
@@ -112,7 +116,7 @@ a {
     opacity: 1;
   }
   .nav:hover .nav-menu {
-    background-color: #e50012;
+    background-color: #C71B1B;
     color: white;
   }
 }

@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (on) {
       interval = window.setInterval(function () {
         change(current === 2 ? 0 : current + 1);
-      }, 10000);
+      }, 15000);
       play.classList.add('slide-active-button');
       pause.classList.remove('slide-active-button');
     } else {
@@ -47,4 +47,50 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 2000);
   });
   control(true);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  var endtime = '2016-02-27T16:00:00.000-05:00';
+  var interval;
+  function getRemainingTime(deadline) {
+    var remaining = Math.floor((Date.parse(deadline) - Date.parse(new Date())) / 1000);
+    var seconds   = Math.floor(remaining % 60);
+    var minutes   = Math.floor(remaining / 60 % 60);
+    var hours     = Math.floor(remaining / (60 * 60) % 60);
+    var days      = Math.floor(remaining / (60 * 60 * 24));
+    return {
+      remaining: remaining,
+      days:      days,
+      hours:     hours,
+      minutes:   minutes,
+      seconds:   seconds
+    }
+  }
+  function update(){
+    var days    = document.querySelector('.countdown-days .countdown-value');
+    var hours   = document.querySelector('.countdown-hours .countdown-value');
+    var minutes = document.querySelector('.countdown-minutes .countdown-value');
+    var seconds = document.querySelector('.countdown-seconds .countdown-value');
+    var t = getRemainingTime(endtime);
+    if (days.innerHTML !== t.days) {
+      days.innerHTML = t.days;
+    }
+    if (hours.innerHTML !== t.hours) {
+      hours.innerHTML = t.hours;
+    }
+    if (minutes.innerHTML !== t.minutes) {
+      minutes.innerHTML = t.minutes;
+    }
+    if (seconds.innerHTML !== t.seconds) {
+      seconds.innerHTML = t.seconds;
+    }
+    if(t.remaining === 0) {
+      clearInterval(interval);
+    }
+  }
+  function initialize() {
+    interval = setInterval(update, 1000);
+  }
+  initialize();
+  update();
 });
