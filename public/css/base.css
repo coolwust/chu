@@ -78,10 +78,106 @@ a {
   z-index: 999;
   padding: 5px 8px 5px 8px;
 }
+.footer {
+  margin-top: 40px;
+  background: url('/public/images/footer.png') repeat;
+  background-color: #222120;
+  color: #999;
+  padding: 10px calc((100% - 1120px) / 2) 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+.footer h3 {
+  color: #FFF;
+  font-weight: bold;
+  margin: 0  0 15px 0;
+}
+.footer-entity {
+  margin: 30px 30px 10px 20px;
+}
+.footer-entity:first-child {
+  margin-left: 20px;
+}
+.footer-entity:last-child {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-contact {
+  display: table;
+}
+.footer-contact li {
+  display: table-row;
+}
+.footer-contact i, .footer-contact span {
+  display: table-cell;
+  line-height: 1.2em;
+  padding: 4px 4px;
+}
+.footer-time {
+  display: table;
+}
+.footer-time li {
+  display: table-row;
+}
+.footer-time span {
+  display: table-cell;
+  line-height: 1.2em;
+  padding: 2px 4px;
+}
+.footer-time span:first-child {
+  font-weight: bold;
+}
+.footer-time span:last-child {
+  text-align: right;
+}
+.footer-link {
+}
+.footer-link li {
+  margin-left: 0px;
+  border-bottom: 1px dotted #666;
+}
+.footer-link li:last-child {
+  border-bottom: none;
+}
+.footer-link a {
+  display: block;
+  padding: 10px 4px 7px 4px;
+  color: #888;
+}
+.footer-link a:hover {
+  color: #C71B1B;
+}
+.footer-link i {
+  padding-right: 10px;
+  transition: padding-right .1s;
+}
+.footer-link a:hover i {
+  padding-right: 14px;
+}
 
 @media (max-width: 680px) {
+  body {
+    margin-top: 61px;
+  }
   .header {
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: white;
+    height: 60px;
+    padding: 0;
+  }
+  .title {
+    margin-left: 20px;
+  }
+  .logo {
+    vertical-align: 0;
+    padding-right: 2px;
   }
   .nav-menu {
     display: block;
@@ -118,5 +214,9 @@ a {
   .nav:hover .nav-menu {
     background-color: #C71B1B;
     color: white;
+  }
+  .footer {
+    justify-content: flex-start;
+    padding-left: 10vw;
   }
 }

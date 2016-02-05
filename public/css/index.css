@@ -208,57 +208,107 @@
 .event-all:hover {
   text-decoration: underline;
 }
-.our-faith {
+.faith {
   padding: 0 calc((100% - 1120px) / 2);
   display: flex;
   flex-flow: row wrap;
 }
-.our-faith > h2 {
-  font-size: 28px;
-  width: 100%;
-  margin: 50px 0 10px 0;
-  display: flex;
-  justify-content: center;
-}
-.our-faith > p {
+.faith > p {
   color: #696362;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 0 20px 20px 20px;
 }
-.our-faith-entity {
+.faith-entity {
   width: 25%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: center;
 }
-.our-faith-entity img {
+.faith-entity img {
   height: 80px;
 }
-.our-faith-entity i {
+.faith-entity i {
   padding: 20px 10px 0 0;
   font-size: 60px;
   color: #C71B1B;
 }
-.our-faith-entity h3 {
+.faith-entity h3 {
   font-size: 24px;
   margin: 20px 0 20px 0;
   color: #393332;
 }
-.our-faith-entity p {
+.faith-entity p {
   margin: 10px 30px;
   text-align: center;
   color: #696362;
+}
+/*
+.history {
+  padding: 0 calc((100% - 1120px) / 2);
+  display: flex;
+  flex-flow: row wrap;
+}
+.history p {
+  width: calc(50% - 100px);
+  line-height: 1.6em;
+  margin: 20px 40px 20px 20px;
+}
+.history div {
+  width: 50%;
+  background: url('/public/images/history.jpg') center/cover no-repeat;
+}
+*/
+/*
+.contact {
+  padding: 0 calc((100% - 1120px) / 2);
+  display: flex;
+  flex-flow: row wrap;
+}
+.contact iframe {
+  width: 50%;
+  margin: 0 20px;
+}
+.contact ul {
+}
+
+*/
+/*
+.content-title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 30px;
+  height: 4px;
+  background: #C71B1B none repeat scroll 0% 0%;
+}
+*/
+.content-title {
+  font-size: 28px;
+  width: 100%;
+  margin: 50px 20px 30px 20px;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 1035px) {
   .countdown {
     display: none;
   }
+  .slide header i:last-child {
+    margin-right: 20px;
+  }
 }
 @media (max-width: 670px) {
+  .slide figure {
+    height: 100vw;
+  }
+  .slide > div {
+    position: relative;
+    height: 100vw;
+  }
   .countdown, .event-detail, .event-or, .event-all {
     display: none;
   }
@@ -268,7 +318,7 @@
   .event {
     justify-content: center;
   }
-  .our-faith-entity {
+  .faith-entity {
     width: 50%;
   }
 }
